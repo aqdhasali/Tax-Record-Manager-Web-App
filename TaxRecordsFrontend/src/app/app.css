@@ -1,0 +1,4 @@
+.nav { display:flex; gap:1rem; padding:1rem; background:#f3f4f6; }
+.nav a { text-decoration:none; color:#111827; }
+.nav a.active { font-weight:600; }
+main { padding:1rem; }

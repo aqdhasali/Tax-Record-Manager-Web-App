@@ -1,0 +1,8 @@
+.container { max-width: 640px; margin: 2rem auto; }
+form { display: grid; gap: 1rem; }
+label { display: grid; gap: .4rem; }
+input, textarea { padding: .55rem .7rem; border: 1px solid #e5e7eb; border-radius: .5rem; }
+small { color: #b91c1c; }
+.buttons { display: flex; gap: .5rem; }
+button { padding: .5rem .9rem; border: 1px solid #e5e7eb; background: white; border-radius: .5rem; }
+button.primary { background: #111827; color: white; }
