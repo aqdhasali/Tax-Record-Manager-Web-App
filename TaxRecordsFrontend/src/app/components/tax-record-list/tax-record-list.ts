@@ -22,7 +22,6 @@ export class TaxRecordList implements OnInit {
   taxYear?: number;
   sortKey: SortKey = 'taxYear';
   sortAsc = false;
-  // sortLocal: any;
 
   constructor(private api: TaxRecordService, private router: Router) {}
   ngOnInit(): void {this.load();}
