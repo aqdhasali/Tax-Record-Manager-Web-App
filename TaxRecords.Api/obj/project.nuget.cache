@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "bbHCmam85hE=",
+  "dgSpecHash": "4cdg2MdJiNk=",
   "success": true,
   "projectFilePath": "C:\\Users\\AqdhasAli\\Documents\\CsharpProjects\\Assessment\\TaxRecords.Api\\TaxRecords.Api.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\AqdhasAli\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.8\\microsoft.aspnetcore.openapi.9.0.8.nupkg.sha512",
+    "C:\\Users\\AqdhasAli\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.0\\microsoft.aspnetcore.openapi.8.0.0.nupkg.sha512",
     "C:\\Users\\AqdhasAli\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.8\\microsoft.entityframeworkcore.9.0.8.nupkg.sha512",
     "C:\\Users\\AqdhasAli\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\9.0.8\\microsoft.entityframeworkcore.abstractions.9.0.8.nupkg.sha512",
     "C:\\Users\\AqdhasAli\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\9.0.8\\microsoft.entityframeworkcore.analyzers.9.0.8.nupkg.sha512",
     "C:\\Users\\AqdhasAli\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\9.0.8\\microsoft.entityframeworkcore.inmemory.9.0.8.nupkg.sha512",
-    "C:\\Users\\AqdhasAli\\.nuget\\packages\\microsoft.extensions.apidescription.server\\9.0.0\\microsoft.extensions.apidescription.server.9.0.0.nupkg.sha512",
+    "C:\\Users\\AqdhasAli\\.nuget\\packages\\microsoft.extensions.apidescription.server\\8.0.0\\microsoft.extensions.apidescription.server.8.0.0.nupkg.sha512",
     "C:\\Users\\AqdhasAli\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\9.0.8\\microsoft.extensions.caching.abstractions.9.0.8.nupkg.sha512",
     "C:\\Users\\AqdhasAli\\.nuget\\packages\\microsoft.extensions.caching.memory\\9.0.8\\microsoft.extensions.caching.memory.9.0.8.nupkg.sha512",
     "C:\\Users\\AqdhasAli\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\9.0.8\\microsoft.extensions.dependencyinjection.9.0.8.nupkg.sha512",
@@ -22,7 +22,8 @@
     "C:\\Users\\AqdhasAli\\.nuget\\packages\\swashbuckle.aspnetcore\\9.0.4\\swashbuckle.aspnetcore.9.0.4.nupkg.sha512",
     "C:\\Users\\AqdhasAli\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\9.0.4\\swashbuckle.aspnetcore.swagger.9.0.4.nupkg.sha512",
     "C:\\Users\\AqdhasAli\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\9.0.4\\swashbuckle.aspnetcore.swaggergen.9.0.4.nupkg.sha512",
-    "C:\\Users\\AqdhasAli\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\9.0.4\\swashbuckle.aspnetcore.swaggerui.9.0.4.nupkg.sha512"
+    "C:\\Users\\AqdhasAli\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\9.0.4\\swashbuckle.aspnetcore.swaggerui.9.0.4.nupkg.sha512",
+    "C:\\Users\\AqdhasAli\\.nuget\\packages\\system.diagnostics.diagnosticsource\\9.0.8\\system.diagnostics.diagnosticsource.9.0.8.nupkg.sha512"
   ],
   "logs": []
 }

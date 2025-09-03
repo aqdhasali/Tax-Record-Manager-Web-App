@@ -1,0 +1,24 @@
+services:
+  api:
+    build:
+      context: ./TaxRecords.Api
+      dockerfile: Dockerfile
+    ports:
+      - "5056:5056"
+    networks:
+      - taxnet
+
+  ui:
+    build:
+      context: ./TaxRecordsFrontend
+      dockerfile: Dockerfile
+    ports:
+      - "4200:4200"
+    networks:
+      - taxnet
+    depends_on:
+      - api
+
+networks:
+  taxnet:
+    driver: bridge
