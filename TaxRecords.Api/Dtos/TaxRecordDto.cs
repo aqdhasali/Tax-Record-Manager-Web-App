@@ -7,9 +7,9 @@ public record TaxRecordDto(
     string RecordTitle,
     int TaxYear,
     decimal IncomeAmount,
-    decimal DeductionsAmout,
+    decimal DeductionsAmount,
     string? Notes,
-    decimal NetIncomel
+    decimal NetIncome
 );
 
 public class CreateUpdateTaxRecordDto

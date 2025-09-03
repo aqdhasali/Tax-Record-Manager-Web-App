@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { TaxRecordService  } from '../../services/tax-record.service';
@@ -23,15 +23,30 @@ export class TaxRecordList implements OnInit {
   sortKey: SortKey = 'taxYear';
   sortAsc = false;
 
-  constructor(private api: TaxRecordService, private router: Router) {}
-  ngOnInit(): void {this.load();}
+  constructor(
+    private api: TaxRecordService, 
+    private router: Router,
+    private cdr: ChangeDetectorRef
+  ) {}
+
+  ngOnInit(): void {
+    this.load();
+  }
 
   load(){
     this.loading = true;
     this.api.getAll({ taxYear: this.taxYear, search: this.search.trim() || undefined })
       .subscribe({ 
-        next: data => { this.records = this.sortLocal(data); this.loading = false; },
-        error: _ => { this.loading = false; alert('Failed to load tax records'); }
+        next: data => { 
+          this.records = [...this.sortLocal(data)];
+          this.loading = false;
+          this.cdr.detectChanges();
+        },
+        error: _ => { 
+          this.loading = false;
+          this.cdr.detectChanges();
+          alert('Failed to load tax records'); 
+        }
       });
   }
 

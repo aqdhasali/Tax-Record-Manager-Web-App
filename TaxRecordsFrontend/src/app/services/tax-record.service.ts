@@ -6,7 +6,7 @@ import { CreateUpdateTaxRecord, TaxRecord } from '../models/tax-records';
 
 @Injectable({ providedIn: 'root' })
 export class TaxRecordService {
-  private baseUrl = `${environment.apiBaseUrl}/taxrecords`;
+  private baseUrl = `http://localhost:5056/api/TaxRecords`;
   constructor(private http: HttpClient) {}
 
   getAll(filters?: { taxYear?: number; search?: string }): Observable<TaxRecord[]> {
@@ -17,6 +17,6 @@ export class TaxRecordService {
   }
   get(id:number) { return this.http.get<TaxRecord>(`${this.baseUrl}/${id}`);}
   create(payload: CreateUpdateTaxRecord) { return this.http.post<TaxRecord>(this.baseUrl, payload);}
-  update(id: number, payload: CreateUpdateTaxRecord) { return this.http.put<TaxRecord>(`${this.baseUrl}/${id}}`,payload);}
+  update(id: number, payload: CreateUpdateTaxRecord) { return this.http.put<TaxRecord>(`${this.baseUrl}/${id}`,payload);}
   delete(id:number) { return this.http.delete<void>(`${this.baseUrl}/${id}`);}
 }

@@ -68,7 +68,7 @@ export class TaxRecordForm implements OnInit{
   }
 
   cancel() : void {
-    this.router.navigate(['/']);
+    this.router.navigateByUrl('');
   }
 
 }
