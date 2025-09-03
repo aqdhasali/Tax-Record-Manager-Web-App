@@ -44,3 +44,4 @@ C:\Users\AqdhasAli\Documents\CsharpProjects\Assessment\TaxRecords.Api\obj\Debug\
 C:\Users\AqdhasAli\Documents\CsharpProjects\Assessment\TaxRecords.Api\obj\Debug\net9.0\TaxRecords.Api.pdb
 C:\Users\AqdhasAli\Documents\CsharpProjects\Assessment\TaxRecords.Api\obj\Debug\net9.0\TaxRecords.Api.genruntimeconfig.cache
 C:\Users\AqdhasAli\Documents\CsharpProjects\Assessment\TaxRecords.Api\obj\Debug\net9.0\ref\TaxRecords.Api.dll
+C:\Users\AqdhasAli\Documents\CsharpProjects\Assessment\TaxRecords.Api\obj\Debug\net9.0\TaxRecords.Api.sourcelink.json

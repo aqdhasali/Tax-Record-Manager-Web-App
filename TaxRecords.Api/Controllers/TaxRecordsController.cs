@@ -13,7 +13,7 @@ public class TaxRecordsController : ControllerBase
     private readonly TaxDbContext _db;
     public TaxRecordsController(TaxDbContext db) => _db = db;
     private static TaxRecordDto ToDto(TaxRecord m) =>
-        new(m.Id, m.RecordTitle, m.TaxYear, m.IncomeAmount, m.DeductionsAmount, m.Notes, m.IncomeAmount);
+        new(m.Id, m.RecordTitle, m.TaxYear, m.IncomeAmount, m.DeductionsAmount, m.Notes, m.NetIncome);
 
     [HttpGet]
     public async Task<ActionResult<IEnumerable<TaxRecordDto>>> GetAll(

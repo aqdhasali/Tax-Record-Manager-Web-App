@@ -13,13 +13,14 @@ builder.Services.AddDbContext<TaxDbContext>(opt =>
     opt.UseInMemoryDatabase("TaxDb"));
 
 /* CORS For Angular Dev Server **/
-const string ClientCors = "ClientCors";
 builder.Services.AddCors(opt =>
 {
-    opt.AddPolicy(ClientCors, p =>
-        p.WithOrigins("http//localhost:4200")
-            .AllowAnyHeader()
-            .AllowAnyMethod());
+    opt.AddPolicy("AllowAll", builder =>
+    {
+        builder.AllowAnyOrigin()
+               .AllowAnyHeader()
+               .AllowAnyMethod();
+    });
 });
 
 
@@ -43,8 +44,9 @@ using (var scope = app.Services.CreateScope())
 app.UseSwagger();
 app.UseSwaggerUI();
 
-app.UseCors();
+app.UseCors("AllowAll");
 app.MapControllers();
+
 
 var urls = app.Configuration["ASPNETCORE_URLS"] ?? "http://localhost:5000";
 app.Urls.Add(urls);

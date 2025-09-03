@@ -7,6 +7,18 @@
             <input type="text" placeholder="Search..." [(ngModel)]="search" (input)="load()"/>
             <button (click)="load()">Refresh</button>
             <button class="primary" (click)="gotoNew()">New Tax Record</button>
+
+            <div class="sort-controls" style="display: flex; gap: 0.5rem; align-items: center;">
+                <button (click)="sortAsc = !sortAsc; records = sortLocal(records.slice())">
+                    {{ sortAsc ? 'Ascending' : 'Descending' }}
+                </button>
+
+                <label for="sortKey">Sort by:</label>
+                <select id="sortKey" [(ngModel)]="sortKey" (change)="records = sortLocal(records.slice())">
+                    <option value="taxYear">Tax Year</option>
+                    <option value="incomeAmount">Income Amount</option>
+                </select>   
+            </div>
         </div>
     </header>
 
@@ -18,6 +30,7 @@
                 <th (click)="setSort('incomeAmount')">Income</th>
                 <th (click)="setSort('deductionsAmount')">Deductions</th>
                 <th (click)="setSort('netIncome')">Net Income</th>
+                <th>Notes</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -26,10 +39,11 @@
             <tr *ngFor="let record of records">
                 <td><a (click)="gotoEdit(record.id)">{{ record.recordTitle }}</a></td>
                 <td>{{ record.taxYear }}</td>
-                <td>{{ record.incomeAmount | currency:'1.2-2'}}</td>
-                <td>{{ record.deductionsAmount | currency:'1.2-2' }}</td>
-                <td>{{ record.netIncome | currency:'1.2-2' }}</td>
-                <td>
+                <td>{{ record.incomeAmount | currency}}</td>
+                <td>{{ record.deductionsAmount | currency }}</td>
+                <td>{{ record.netIncome | currency }}</td>
+                <td>{{ record.notes }}</td>
+                <td style="display: flex; gap: 0.5rem;">
                     <button (click)="gotoEdit(record.id)">Edit</button>
                     <button class="danger" (click)="confirmDelete(record.id)">Delete</button>
                 </td>

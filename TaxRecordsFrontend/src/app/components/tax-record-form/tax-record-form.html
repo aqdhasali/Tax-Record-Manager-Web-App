@@ -5,7 +5,7 @@
         <label>
             Title 
             <input formControlName="recordTitle" />
-            <small *ngIf="form.controls.recordTitle.touched && form.controls.recordTitle.invalid">
+            <small *ngIf="form.controls['recordTitle'].touched && form.controls['recordTitle'].invalid">
                 Title is required
             </small>
         </label>
@@ -32,7 +32,7 @@
 
         <div class="buttons">
             <button type="submit" class="primary" [disabled]="submitting">Save</button>
-            <button type="button"(click)="onCancel()">Cancel</button>
+            <button type="button"(click)="cancel()">Cancel</button>
         </div>
     </form>
 </div>
