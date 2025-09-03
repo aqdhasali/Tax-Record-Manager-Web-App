@@ -1,1 +1,44 @@
-<p>tax-record-list works!</p>
+<div class="container">
+    <header class="toolbar">
+        <h1>Tax Records</h1>
+
+
+        <div class="actions">
+            <input type="text" placeholder="Search..." [(ngModel)]="searchTerm" (input)="load()"/>
+            <button (click)="load()">Refresh</button>
+            <button class="primary" (click)="gotoNew()">New Tax Record</button>
+        </div>
+    </header>
+
+    <table *ngIf="records.length; else emptyState">
+        <thead>
+            <tr>
+                <th (click)="setSort('taxYear')">Tax Year</th>
+                <th (click)="setSort('recordTitle')">Title</th>
+                <th (click)="setSort('incomeAmount')">Income</th>
+                <th (click)="setSort('deductionsAmount')">Deductions</th>
+                <th (click)="setSort('netIncome')">Net Income</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let record of records">
+                <td><a (click)="gotoEdit(record.id)">{{ record.recordTitle }}</a></td>
+                <td>{{ record.taxYear }}</td>
+                <td>{{ record.incomeAmount | currency:'1.2-2'}}</td>
+                <td>{{ record.deductionsAmount | currency:'1.2-2' }}</td>
+                <td>{{ record.netIncome | currency:'1.2-2' }}</td>
+                <td>
+                    <button (click)="gotoEdit(record.id)">Edit</button>
+                    <button class="danger" (click)="confirmDelete(record.id)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ng-template #emptyState>
+        <p *ngIf="!loading">No tax records found.</p>
+        <p *ngIf="loading">Loading...</p>
+    </ng-template>
+</div>
