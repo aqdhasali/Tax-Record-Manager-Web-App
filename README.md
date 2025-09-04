@@ -25,5 +25,3 @@ Built with **ASP.NET Core Web API** (back-end) and **Angular** (front-end), the 
 * **Containerization:** Docker & Docker Compose
 * **Others:** Nginx (for serving Angular and proxying API requests)
 
-
-Would you like me to also add a **“Quick Start”** section (commands to run locally with `dotnet run` and `ng serve`, plus how to use `docker compose up`)? That would make the README really complete for reviewers.
